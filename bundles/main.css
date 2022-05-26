@@ -382,6 +382,7 @@ input {
   height: auto;
   margin-top: 0;
   position: relative;
+  z-index: 9;
 }
 .banner__wrapper {
   height: 100%;
