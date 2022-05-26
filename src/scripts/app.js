@@ -1,6 +1,8 @@
 import * as functions from "./modules/functions.js";
 functions.isWebp();
 
+
+
 import { Header } from "../blocks/header/header.js";
 new Header();
 
