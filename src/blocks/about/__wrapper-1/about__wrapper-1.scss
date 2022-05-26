@@ -1,0 +1,14 @@
+&__wrapper-1 {
+  display: grid;
+  @media (max-width: map-get($media, lg, width)) {
+    margin-top: 40px;
+    grid-template-columns: 1fr;
+    grid-template-areas: "about__nums" "about__video";
+  }
+
+  @media (min-width: map-get($media, lg, width)) {
+    margin-top: 50px;
+    grid-template-columns: 7.5fr 4.5fr;
+    grid-template-areas: "about__video about__nums";
+  }
+}

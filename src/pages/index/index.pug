@@ -1,0 +1,311 @@
+doctype html
+html(lang="ru")
+  head
+    link(rel="stylesheet" href="./bundles/main.min.css")
+
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title SPEAK
+
+  body
+    include ../../blocks/loader/loader.pug
+    .blur-1
+      include ../../blocks/header/header.pug
+      .banner
+        .container.banner__wrapper
+          .banner__content.wow.animate__lightSpeedInLeft
+            .subtitle +300 прошедших отбор психологов
+            h1.banner__main-title Сессии с психологом Онлайн
+            .button.button_size_big Начать беседу
+      .app
+        .container.app__wrapper
+          .app__video
+            iframe(loading="lazy" src="//youtube.com/embed/-3iOrvvWiLY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+          .download-app.app__download.wow.animate__backInRight
+            h3.title-h3 Скачайте бесплатно приложение SPEAK
+            .download-app__speak-wrapper
+              .download-app__logo
+                img(src="@img/blocks/download-app/logo.svg" alt="logo" srcset="")
+              .download-app__info 
+                .download-app__name SPEAK
+                p.download-app__desk онлайн сессии с психологом доступно для iOS и Android
+            .download-app__stores
+              .download-app__store
+                img(src="@img/blocks/download-app/__store/app-store.svg" alt="" srcset="")
+              .download-app__store
+                img(src="@img/blocks/download-app/__store/google.svg" alt="" srcset="")
+    .speakers
+      .speakers__wrapper.container
+        h3.title-h3.title-h3_align_center.wow.animate__lightSpeedInLeft Психологи работающие с актуальными темами
+        .speakers__tags.wow.animate__slideInUp
+          .button.button_size_middle.button_bg-color_light.button_weight_400 Чувства
+          .button.button_size_middle.button_bg-color_light.button_weight_400 Одиночество
+          .button.button_size_middle.button_bg-color_light.button_color_green Вредные привычки
+          .button.button_size_middle.button_bg-color_light.button_weight_400 Отношения
+          .button.button_size_middle.button_bg-color_light.button_weight_400 Работа
+          .button.button_size_middle.button_bg-color_light.button_weight_400 Смыслы
+          .button.button_size_middle.button_bg-color_light.button_weight_400 Одиночество
+          .button.button_size_middle.button_bg-color_light.button_weight_400 Одиночество
+          .button.button_size_middle.button_bg-color_light.button_weight_400 Отношения с близкими
+          .button.button_size_middle + 300 психологов
+      .swiper.container.speakers__slider.wow.animate__slideInUp
+        - let speakers = [['1.png','Илья Благов'],['2.png','Иванна Есина'],['3.png','Артур Островский'],['4.png','Юля Заграничная'],['5.png','Андрей Ян']];
+        .swiper-wrapper.speakers__slider-wrapper
+          each speaker in speakers
+            .speakers__slide-wrapper.swiper-slide
+              .speakers__slide
+                img(loading="lazy" src=`@img/blocks/speakers/__slide/${speaker[0]}` alt="slide" srcset="")
+                .speakers__slide-speaker-name= speaker[1]
+                .speakers__bottom
+                  .speakers__left
+                    each val in [1, 2, 3, 4, 5]
+                      i(class="fa-solid fa-star")
+                  a(href="#").speakers__right
+                    i(class="fa-solid fa-arrow-right-long")
+        .speakers__slider-pagination.swiper-pagination.pagination
+    .blur-2
+      .help
+        .container.help__wrapper
+          h2.title-h2.help__title.wow.animate__lightSpeedInLeft Поможем вам
+          ul.help__list.fa-ul
+            li <span class="fa-li"><i class="fa-duotone fa-circle-check"></i></span> Разрешить причины сложных отношений с партнером
+            li <span class="fa-li"><i class="fa-duotone fa-circle-check"></i></span> Снять или снизить остроту переживаний
+            li <span class="fa-li"><i class="fa-duotone fa-circle-check"></i></span> Справиться с выгоранием на работе и найти мотивацию
+            li <span class="fa-li"><i class="fa-duotone fa-circle-check"></i></span> Понять себя в отношениях с близкими людьми
+            li <span class="fa-li"><i class="fa-duotone fa-circle-check"></i></span> Найти себя и понимать свои желания
+            li <span class="fa-li"><i class="fa-duotone fa-circle-check"></i></span> Исследовать и управлять изменениями в своей жизни
+          .help__img.wow.animate__fadeInRight <img src="@img/blocks/help/help.png" alt="help" srcset="">
+    .advantage
+      .container.advantage__wrapper 
+        .advantage__img.wow.animate__fadeInLeft
+          img(loading="lazy" src="@img/blocks/advantage/__img/mobile.png" alt="" srcset="")
+        .advantage__content 
+          .title-h2.advantage__title.wow.animate__backInRight Преимущества онлайн сессий с психологом
+          ul.advantage__list
+            li.wow.animate__slideInUp
+              b Занимайтесь где и как удобно
+              p Дома или в поездке и в любом часовом поясе
+            li.wow.animate__slideInUp
+              b Меньше забот- больше мотивации
+              p Не тратьте время на дорогу и управляйте занятиями в два клика
+            li.wow.animate__slideInUp
+              b Доверяйте себе
+              p Выбирайте среди проверенных психологов, которые специаллизируются на ваших запросах
+    .steps 
+      .container.steps__wrapper 
+        .steps__header
+          h2.title-h2.wow.animate__fadeInLeft Как мы отбираем специалистов?
+          .subtitle.wow.animate__fadeInLeft Отбор проходят меньше 10% специаллистов
+        .steps__step-list
+          .steps__step.wow.animate__fadeInLeft(data-index="1")
+            span Документы об образовании
+            p Обязательно иметь высшее психологическое образование и сертификаты для ведения психотерапии
+          .steps__step.wow.animate__fadeInRight(data-index="2") 
+            span Опыт частной практики и личной терапии
+            p Нужно не менее 3-х лет частной практики, личная терапия и регулярные супервизии
+          .steps__step.wow.animate__fadeInLeft(data-index="3")
+            span Собеседование с нашим экспертом-ментором
+            p Отслеживаются коммуникативные способности, уровень эмпатии, манера и стиль беседы,  проффесиональные компетенции
+        .steps__img 
+          img(loading="lazy" src="@img/blocks/steps/__img/img.png" alt="")
+    .about 
+      .container
+        h2.title-h2.title-h2_align_center.animate__lightSpeedInLeft О сервисе
+      .container.about__wrapper-1
+        .about__video
+          iframe(loading="lazy" src="//youtube.com/embed/-3iOrvvWiLY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+        .about__nums
+          .about__num.wow.animate__lightSpeedInRight
+            span 900 +
+            p регистраций вчера
+          .about__num.wow.animate__lightSpeedInRight
+            span 75 000 +
+            p проведено сессий
+          .about__num.wow.animate__lightSpeedInRight
+            span 354 +
+            p психологов
+      .container.about__wrapper-2
+        .about__card.wow.animate__fadeInLeft
+          img(loading="lazy" src="@img/blocks/about/__card/img-1.png" alt="" srcset="")
+          .about__card-content 
+            span Подбор “По позже”
+            p Подбор с возможностью бронирование сессии на будущее
+        .about__card.wow.animate__lightSpeedInRight
+          img(loading="lazy" src="@img/blocks/about/__card/img-2.png" alt="" srcset="")
+          .about__card-content 
+            span Подбор “Сейчас”
+            p Подбор с возможностью начала сессии “здесь и сейчас”
+    .blur-2
+      .how-work 
+        .container
+          h2.title-h2.title-h2_align_center.wow.animate__slideInUp Как это устроено
+        .container.how-work__wrapper
+          .how-work__steps
+            .how-work__num(data-index="1" @click="changeStep(1, $event)") 1
+            .how-work__line
+            .how-work__num.how-work__num_selected_true(data-index="2" @click="changeStep(2, $event)") 2
+            .how-work__line
+            .how-work__num(data-index="3" @click="changeStep(3, $event)") 3
+            .how-work__line
+            .how-work__num(data-index="4" @click="changeStep(4, $event)") 4
+          .how-work__step.how-work__step_mob-display_block.wow.animate__fadeInLeft(data-index="1")
+            b Заполните простую анкету
+            p Расскажите, что вас беспокоит и что важно в психологе. 
+          .how-work__step.how-work__step_bg_green.wow.animate__lightSpeedInRight(data-index="2")
+            b Выберите психолога
+            p Выберите понравившегося психолога 
+          .how-work__step.wow.animate__fadeInLeft(data-index="3")
+            b Выберите способ связи с психологом
+            p 49руб/мин по #[span аудио/видео] связи 200руб за 24 часа #[span чата + аудио сообщения]
+          .how-work__step.wow.animate__lightSpeedInRight(data-index="4")
+            b Начните общение
+            p Все общение происходит через платформу SPEAK. Вслучае если психолог вам не понравится, вы можете заменить его без дополнительных переплат
+          .how-work__img 
+            img(loading="lazy" src="@img/blocks/how-work/__img/smartphone.png" alt="smartphone" srcset="")
+          a(href="#").button.button_size_big.button_bg-color_light.button_color_green.button_border-color_green.how-work__button Начать общение
+    .services
+      .container
+        h2.title-h2.wow.animate__fadeInLeft Услуги
+      .container
+        .services__wrapper
+          .services__service.wow.animate__fadeInLeft
+            .services__header
+              .services__time 24 часа чата 
+              .services__price 4200₽#[span / 24 часа]
+            ul.services__list.fa-ul 
+              li <span class="fa-li"><i class="fa-duotone fa-circle-check"></i></span> 24 часа доступа к чату с психологом
+              li <span class="fa-li"><i class="fa-duotone fa-circle-check"></i></span> Аудио сообщения
+            a(href="#").button.button_color_green.button_bg-color_light.button_size_big Перейти
+          .services__service.services__service_type_two.wow.animate__fadeInRight
+            .services__popular Популярное #[i(class="fa-solid fa-star")]
+            .services__header
+              .services__time.services__time_type_two Аудио/Видео сессии 
+              .services__price.services__price_type_two 49₽ #[span / 1 минута ]
+            ul.services__list.services__list_type_two.fa-ul 
+              li <span class="fa-li"><i class="fa-duotone fa-circle-check"></i></span> Безлимитный доступа к чату с психологом до начала сессии
+              li <span class="fa-li"><i class="fa-duotone fa-circle-check"></i></span> Аудио сообщения
+              li <span class="fa-li"><i class="fa-duotone fa-circle-check"></i></span> Нет лимитов по времени разговора
+            .services__footer
+              .services__input-num 
+                .services__input-left
+                  div(@click="minusTenMinutes")
+                    i(class="fa-solid fa-caret-left fax2")
+                  span {{minutes}}
+                  div(@click="plusTenMinutes")
+                    i(class="fa-solid fa-caret-right fax2")
+                .services__input-center
+                  span.services__placeholder min
+                  .services__v-line
+                  span {{price}}
+                .services__input-right
+                  span.services__placeholder ₽
+              a(href="#").button.button_color_green.button_bg-color_light.button_size_big Перейти
+    .app-2 
+      .container.app-2__wrapper 
+        .download-app.app__download.app-2__download.wow.animate__fadeInLeft
+          h3.title-h3 Скачайте бесплатно приложение SPEAK
+          .download-app__speak-wrapper
+            .download-app__logo
+              img(loading="lazy" src="@img/blocks/download-app/logo.svg" alt="logo" srcset="")
+            .download-app__info 
+              .download-app__name SPEAK
+              p.download-app__desk онлайн сессии с психологом доступно для iOS и Android
+          .download-app__stores
+            .download-app__store
+              img(loading="lazy" src="@img/blocks/download-app/__store/app-store.svg" alt="" srcset="")
+            .download-app__store
+              img(loading="lazy" src="@img/blocks/download-app/__store/google.svg" alt="" srcset="")
+        .app-2__img.wow.animate__fadeInRight
+          img(src="@img/blocks/app-2/__img/smartphone.png" alt="" srcset="")
+    .reviews
+      .container
+        h2.title-h2.wow.animate__slideInUp Отзывы
+      .container.swiper.reviews__slider.wow.animate__slideInUp
+        .swiper-wrapper
+          .swiper-slide.reviews__slide 
+            img(loading="lazy" src="@img/blocks/reviews/__slide/img-3.png" alt="" srcset="").reviews__img
+            .swiper-lazy-preloader
+            .reviews__header 
+              div
+                .reviews__name Sophia Jones
+                .reviews__job Teacher
+              .reviews__stars
+                each val in [1, 2, 3, 4, 5]
+                  i(class="fa-solid fa-star")
+            .reviews__desk After just 2 months, Speak has already made such an impact on my life. It has helped me develop manageable solutions to feelings of stress, anxiety, and overwhelm. Speaker helped me navigate the difficult stages of grief after losing my mom, with compassion and encouragement. And she’s easy to open up to, making me feel heard and understood.
+          .swiper-slide.reviews__slide 
+            img(loading="lazy" src="@img/blocks/reviews/__slide/img-2.png" alt="" srcset="").reviews__img
+            .reviews__header 
+              div
+                .reviews__name Jay K. Braun
+                .reviews__job Artist
+              .reviews__stars
+                each val in [1, 2, 3, 4, 5]
+                  i(class="fa-solid fa-star")
+            .reviews__desk After just 2 months, Speak has already made such an impact on my life. It has helped me develop manageable solutions to feelings of stress, anxiety, and overwhelm. Speaker helped me navigate the difficult stages of grief after losing my mom, with compassion and 
+          .swiper-slide.reviews__slide 
+            img(loading="lazy" src="@img/blocks/reviews/__slide/img-1.png" alt="" srcset="").reviews__img
+            .reviews__header 
+              div
+                .reviews__name Jay K. Braun
+                .reviews__job Artist
+              .reviews__stars
+                each val in [1, 2, 3, 4, 5]
+                  i(class="fa-solid fa-star")
+            .reviews__desk After just 2 months, Speak has already made such an impact on my life. It has helped me develop manageable solutions to feelings of stress, anxiety, and overwhelm. Speaker helped me navigate the difficult stages of grief after losing my mom, with compassion and encouragement. And she’s easy to open up to, making me feel heard and understood.
+
+        .reviews__slider-pagination.swiper-pagination.pagination
+    .seo 
+      .container 
+        h3.title-h3.seo__title.wow.animate__slideInUp Детский психолог онлайн
+      .container.seo__wrapper 
+        .seo__col
+          div
+            h4.title-h4 Чем поможет детский психолог онлайн?
+            p Каждый родитель хочет, чтобы его ребенок рос сильной уравновешенной личностью. Мы понимаем, что именно в детстве формируются зачатки характера. Как справиться с возникающими проблемами, как выстроить отношения с ребенком, чтобы он доверял вам? На эти и другие вопросы поможет ответить детский психолог онлайн.
+          div
+            h4.title-h4 Преимущества онлайн-консультации детского психолога
+            p Главный плюс сеанса в таком формате – экономия времени. Вам не придется тратить время на дорогу и долгие сборы. Все, что нужно – компьютер или смартфон, микрофон и блокнот с ручкой, чтобы записывать важную информацию. Если вам или ребенку тяжело общаться с незнакомым человеком лично, онлайн-связь в этом случае упростит дело. 
+          div
+            h4.title-h4 Когда нужна помощь детского психолога онлайн?
+            p Онлайн-консультация детского психолога может быть полезна, если у вас есть вопросы по таким темам, как:
+            ul 
+              li Плохая успеваемость;
+              li Стеснительность;
+              li Цифровая зависимость;
+              li Агрессия;
+              li Потеря близкого в семье;
+              li Возрастной кризис;
+              li Подготовка к детскому саду или школе;
+              li Профориентация.
+            br
+            p Это лишь часть тем, которые можно затронуть. Помните, что, если возникает ситуация, в которой вы самостоятельно не можете разобраться, сейчас консультация детского психолога онлайн поможет найти ответы.
+          div
+            h4.title-h4 Как проходит онлайн-консультация детского психолога?
+            p Задать вопрос детскому психологу онлайн может как сам ребенок, так и родитель. 
+        .seo__col
+          div
+            p На первом сеансе обычно присутствует родитель или опекун, а также сам «виновник торжества». Следующие сеансы могут быть и без взрослого, если ребенок сам в состоянии связаться через интернет.
+            br
+            p Бывает и так, что сначала ребенку присутствовать необязательно. В этом случае работа происходит с родителем, а если есть необходимость, позже присоединяется ребенок.
+            br
+            p Психолог по детским вопросам онлайн может попросить ребенка нарисовать что-то, далее по этим рисункам он проведет диагностику. Родитель тоже является звеном связи с психикой ребенка. Через него психолог может сделать вывод о том, какая проблема сейчас назрела.
+            br
+            p Если специалист попросит вас пройти обследование или сдать анализы для более ясной картины, не пугайтесь, это нормально. Таким образом, вы оба сможете исключить какие-либо диагнозы
+          div
+            h4.title-h4 О чем поговорить с детским психологом?
+            p Родители малышей часто обращаются с вопросами об адаптации в детском саду. Есть тревожные мамы, которые сомневаются, стоит ли отдавать малыша в сад или же пока слишком рано. Очень многих волнует, что воспитатель будет срываться на ребенка. Это логично, ведь в силу того, что в СМИ регулярно появляются жуткие новости о чудовищных ЧП в детсадах, беспокойство обосновано. 
+            br
+            p Отдельный вопрос подготовки к саду. В интернете полно информации в таком ключе: «ребенок должен научиться самостоятельно есть, ходить в туалет и засыпать сам перед тем, как идти в сад». Особо мнительные беспрекословно верят, другие понимают: ребенок ничего никому не должен. Его невозможно научить чему-то, пока он сам не захочет делать это. «Дрессировке» малыши не поддаются. Но пугаться не стоит, в любом случае, воспитатели будут помогать малышам в этих вопросах. Главное – настроиться на позитив и верить в хорошее.
+            br
+            p Дети постарше сталкиваются с проблемами переходного возраста, неуверенностью в себе, безответной любовью и другими. Если вы понимаете, что вам с чадом необходима онлайн-консультация, вы можете выбрать специалиста на нашем сайте.
+    include ../../blocks/footer/footer.pug
+link(rel="stylesheet" href="./vendor/animate/animate.min.css")
+script(src="./vendor/wow/wow.min.js")
+script(src="./vendor/vue/vue.min.js")
+script(src="./bundles/app.min.js")
+
+// Font Awesome
+link(loading="lazy" rel="stylesheet" href="./vendor/fontawesome-6/pro/css/all.min.css")
+script(loading="lazy" src="./vendor/fontawesome-6/pro/js/all.min.js")

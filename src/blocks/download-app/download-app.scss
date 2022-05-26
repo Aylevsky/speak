@@ -1,0 +1,23 @@
+.download-app {
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: map-get($media, md, width)) {
+    margin-top: 30px;
+  }
+
+  @media (min-width: map-get($media, md, width)) {
+    margin-top: 50px;
+  }
+
+  @media (min-width: map-get($media, lg, width)) {
+    margin-top: 0;
+  }
+
+  @import "./__desk/download-app__desk.scss";
+  @import "./__logo/download-app__logo.scss";
+  @import "./__name/download-app__name.scss";
+  @import "./__speak-wrapper/download-app__speak-wrapper.scss";
+  @import "./__stores/download-app__stores.scss";
+  @import "./__store/download-app__store.scss";
+}

@@ -1,0 +1,68 @@
+&__step {
+  grid-area: steps__step;
+  font-family: map-get($fonts, main);
+  color: map-get($colors, text, 3);
+  position: relative;
+
+  &::before {
+    content: attr(data-index);
+    line-height: 100%;
+    font-weight: 700;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    font-family: map-get($fonts, main);
+    color: map-get($colors, text, 1);
+    opacity: 0.1;
+    @media (max-width: map-get($media, md, width)) {
+      font-size: 100px;
+    }
+
+    @media (min-width: map-get($media, md, width)) {
+      font-size: 128px;
+      left: -20px;
+    }
+
+    @media (min-width: map-get($media, lg, width)) {
+      left: 0;
+    }
+  }
+
+  span {
+    color: map-get($colors, text, main);
+    line-height: 140%;
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+
+  p {
+    line-height: 150%;
+  }
+
+  @media (max-width: map-get($media, lg, width)) {
+    padding: 20px 0;
+    padding-left: 30px;
+    margin-bottom: 20px;
+
+    span {
+      font-size: 18px;
+    }
+    p {
+      font-size: 16px;
+    }
+  }
+
+  @media (min-width: map-get($media, lg, width)) {
+    padding: 20px 0;
+    padding-left: 50px;
+    margin-bottom: 20px;
+
+    span {
+      font-size: 20px;
+    }
+    p {
+      font-size: 18px;
+    }
+  }
+}

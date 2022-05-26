@@ -1,0 +1,23 @@
+.banner {
+  @import "./__wrapper/banner__wrapper";
+  @import "./__content/banner__content";
+  @import "./__main-title/banner__main-title";
+
+  height: auto;
+  margin-top: 0;
+  position: relative;
+
+  @media (min-width: map-get($media, md, width)) {
+    height: 275px;
+    margin-top: 0px;
+  }
+
+  @media (min-width: map-get($media, lg, width)) {
+    height: 470px;
+  }
+
+  @media (min-width: map-get($media, xl, width)) {
+    margin-top: 80px;
+    height: 470px;
+  }
+}

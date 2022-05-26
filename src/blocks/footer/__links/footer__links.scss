@@ -1,0 +1,23 @@
+&__links {
+  display: grid;
+  grid-row-gap: 20px;
+
+  grid-template-columns: repeat(3, auto);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 120%;
+  grid-column-gap: 30px;
+
+  @media (max-width: map-get($media, md, width)) {
+    grid-template-columns: auto auto;
+  }
+
+  @media (min-width: map-get($media, lg, width)) {
+    width: 85%;
+  }
+
+  a {
+    color: map-get($colors, text, 3);
+    font-family: map-get($fonts, main);
+  }
+}

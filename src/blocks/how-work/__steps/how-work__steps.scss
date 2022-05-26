@@ -1,0 +1,14 @@
+&__steps {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  @media (max-width: map-get($media, md, width)) {
+    margin-bottom: 30px;
+  }
+  @media (min-width: map-get($media, md, width)) {
+    margin-bottom: 50px;
+  }
+  @media (min-width: map-get($media, lg, width)) {
+    display: none;
+  }
+}

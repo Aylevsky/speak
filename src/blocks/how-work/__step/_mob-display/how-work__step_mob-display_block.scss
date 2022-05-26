@@ -1,0 +1,5 @@
+&_mob-display_block {
+  @media (max-width: map-get($media, lg, width)) {
+    display: block;
+  }
+}

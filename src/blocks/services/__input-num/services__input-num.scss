@@ -1,0 +1,51 @@
+&__input-num {
+  display: flex;
+  justify-content: space-between;
+  background: map-get($colors, 2);
+  border-radius: 12px;
+  padding: 0 20px;
+  height: 48px;
+  user-select: none;
+
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 135%;
+  color: map-get($colors, text, 3);
+  font-family: map-get($fonts, main);
+
+  svg {
+    color: map-get($colors, main);
+    cursor: pointer;
+  }
+
+  .services__input-left,
+  .services__input-center {
+    * {
+      margin-right: 20px;
+      * {
+        margin: 0;
+      }
+    }
+    span {
+      line-height: 100%;
+    }
+  }
+
+  .services__input-center {
+    @media (max-width: map-get($media, md, width)) {
+      * {
+        margin-right: 12px;
+        * {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  .services__input-left,
+  .services__input-center,
+  .services__input-right {
+    display: flex;
+    align-items: center;
+  }
+}

@@ -1,0 +1,35 @@
+/**
+ * DEFAULT
+**/
+@import "./default/fonts.scss";
+@import "./default/const.scss";
+@import "./default/base.scss";
+
+/**
+ * BLOCKS
+**/
+@import "../blocks/button/button.scss";
+@import "../blocks/container/container.scss";
+@import "../blocks/header/header.scss";
+@import "../blocks/banner/banner.scss";
+@import "../blocks/subtitle/subtitle.scss";
+@import "../blocks/app/app.scss";
+@import "../blocks/download-app/download-app.scss";
+@import "../blocks/title-h3/title-h3.scss";
+@import "../blocks/title-h2/title-h2.scss";
+@import "../blocks/speakers/speakers.scss";
+@import "../blocks/pagination/pagination.scss";
+@import "../blocks/help/help.scss";
+@import "../blocks/advantage/advantage.scss";
+@import "../blocks/steps/steps.scss";
+@import "../blocks/about/about.scss";
+@import "../blocks/how-work/how-work.scss";
+@import "../blocks/services/services.scss";
+@import "../blocks/app-2/app-2.scss";
+@import "../blocks/reviews/reviews.scss";
+@import "../blocks/seo/seo.scss";
+@import "../blocks/title-h4/title-h4.scss";
+@import "../blocks/footer/footer.scss";
+@import "../blocks/blur-1/blur-1.scss";
+@import "../blocks/blur-2/blur-2.scss";
+@import "../blocks/loader/loader.scss";

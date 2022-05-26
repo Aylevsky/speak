@@ -1,0 +1,19 @@
+&__slider {
+  @media (max-width: map-get($media, md, width)) {
+    width: map-get($media, sm, container);
+  }
+
+  @media (min-width: map-get($media, md, width)) {
+    width: calc(map-get($media, md, container) + 30px) !important;
+  }
+  @media (max-width: map-get($media, lg, width)) {
+    margin-top: 30px;
+  }
+  @media (min-width: map-get($media, lg, width)) {
+    margin-top: 50px;
+    width: calc(map-get($media, lg, container) + 30px) !important;
+  }
+  @media (min-width: map-get($media, xl, width)) {
+    width: calc(map-get($media, xl, container) + 30px) !important;
+  }
+}

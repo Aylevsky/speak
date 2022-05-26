@@ -1,0 +1,13 @@
+&__list {
+  margin-left: 28px !important;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 120%;
+  color: map-get($colors, text, 3);
+  font-family: map-get($fonts, main);
+  display: grid;
+  grid-row-gap: 20px;
+  svg {
+    color: map-get($colors, main);
+  }
+}

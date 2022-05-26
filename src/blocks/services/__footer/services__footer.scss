@@ -1,0 +1,17 @@
+&__footer {
+  display: grid;
+
+  @media (max-width: map-get($media, lg, width)) {
+    grid-template-columns: 1fr;
+    grid-row-gap: 20px;
+
+    .button {
+      width: 100%;
+    }
+  }
+
+  @media (min-width: map-get($media, lg, width)) {
+    grid-template-columns: 1fr auto;
+    grid-column-gap: 20px;
+  }
+}

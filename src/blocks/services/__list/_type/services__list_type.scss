@@ -1,0 +1,17 @@
+&_type_two {
+  li {
+    color: map-get($colors, text, 2) !important;
+    svg {
+      color: map-get($colors, main);
+
+      .fa-secondary {
+        color: #fff;
+      }
+
+      .fa-primary {
+        color: #fff;
+        opacity: 0.25 !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+&__stores {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: auto;
+
+  @media (max-width: map-get($media, md, width)) {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+  }
+
+  @media (max-width: map-get($media, lg, width)) {
+    margin-top: 40px;
+  }
+}

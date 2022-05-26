@@ -1,0 +1,26 @@
+&__img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  grid-area: help__img;
+  img {
+    @media (max-width: map-get($media, md, width)) {
+      width: 100%;
+      max-width: 320px;
+    }
+
+    @media (min-width: map-get($media, md, width)) {
+      width: 330px;
+      margin-right: -40px;
+    }
+
+    @media (min-width: map-get($media, lg, width)) {
+      width: 360px;
+    }
+
+    @media (min-width: map-get($media, xl, width)) {
+      width: 436px;
+    }
+  }
+}

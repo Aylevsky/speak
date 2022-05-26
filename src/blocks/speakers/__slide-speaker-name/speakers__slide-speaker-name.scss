@@ -1,0 +1,19 @@
+&__slide-speaker-name {
+  margin-top: 15px;
+  font-family: map-get($fonts, main);
+  font-weight: 700;
+  color: map-get($colors, text, 3);
+
+  @media (max-width: map-get($media, md, width)) {
+    font-size: 18px;
+    line-height: 120%;
+  }
+  @media (min-width: map-get($media, md, width)) {
+    font-size: 16px;
+    line-height: 120%;
+  }
+  @media (min-width: map-get($media, xl, width)) {
+    font-size: 18px;
+    line-height: 120%;
+  }
+}

@@ -1,0 +1,7 @@
+.title-h4 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 120%;
+  color: map-get($colors, text, main);
+  font-family: map-get($fonts, main);
+}

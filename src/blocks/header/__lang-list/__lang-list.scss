@@ -1,0 +1,47 @@
+&__lang-list {
+  z-index: 10;
+  width: 80px;
+  height: auto;
+  position: absolute;
+  top: 60px;
+  padding: 0 10px;
+  transition: 0.4s;
+  display: none;
+
+  background: map-get($colors, 2);
+  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+
+  li a {
+    color: map-get($colors, text, main);
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    font-family: map-get($fonts, main);
+
+    img {
+      width: 26px;
+      height: 26px;
+    }
+
+    * {
+      margin: 0 3px;
+    }
+  }
+
+  &::after {
+    box-shadow: 4px -4px 8px 0px rgba(0, 0, 0, 0.03);
+    width: 20px;
+    height: 20px;
+    top: -10px;
+    left: calc(50% - 10px);
+    transform: rotate(-45deg);
+    background: map-get($colors, 2);
+    content: "";
+    display: block;
+    position: absolute;
+  }
+
+  @import "./_display/header__lang-list_display_block";
+  @import "./_display/header__lang-list_display_none";
+}

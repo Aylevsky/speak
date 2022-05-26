@@ -1,0 +1,6 @@
+&__name {
+  color: map-get($colors, text, 3);
+  font-family: map-get($fonts, main);
+  line-height: 130%;
+  font-style: 16px;
+}

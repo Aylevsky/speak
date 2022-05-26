@@ -1,0 +1,23 @@
+.how-work {
+  @media (max-width: map-get($media, md, width)) {
+    margin-top: 80px;
+  }
+
+  @media (min-width: map-get($media, md, width)) {
+    margin-top: 100px;
+  }
+
+  @media (min-width: map-get($media, xl, width)) {
+    margin-top: 145px;
+  }
+
+  @import "./__button/how-work__button.scss";
+  @import "./__desk/how-work__desk.scss";
+  @import "./__img/how-work__img.scss";
+  @import "./__step/how-work__step.scss";
+  @import "./__steps/how-work__steps.scss";
+  @import "./__title/how-work__title.scss";
+  @import "./__wrapper/how-work__wrapper.scss";
+  @import "./__line/how-work__line.scss";
+  @import "./__num/how-work__num.scss";
+}

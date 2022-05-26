@@ -1,0 +1,34 @@
+&__list {
+  li {
+    line-height: 22px;
+    font-family: map-get($fonts, main);
+    font-weight: 400;
+    line-height: 140%;
+    margin: 15px 0;
+
+    color: map-get($colors, 3);
+    @media (max-width: map-get($media, md, width)) {
+      font-size: 16px;
+    }
+    @media (min-width: map-get($media, md, width)) {
+      font-size: 18px;
+    }
+
+    span.fa-li {
+      text-align: start;
+    }
+  }
+  svg {
+    width: 20px;
+    color: map-get($colors, main);
+
+    .fa-secondary {
+      opacity: 1 !important;
+    }
+
+    .fa-primary {
+      opacity: 0.1 !important;
+    }
+  }
+  @import "./_type/services__list_type.scss";
+}

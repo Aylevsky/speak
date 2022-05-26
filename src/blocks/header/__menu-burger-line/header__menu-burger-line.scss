@@ -1,0 +1,8 @@
+&__menu-burger-line {
+  width: 100%;
+  height: 3px;
+  border-radius: 3px;
+  background-color: map-get($colors, 3);
+}
+
+@import "./_color/header__menu-burger-line_color_green";

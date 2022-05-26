@@ -1,0 +1,16 @@
+&__wrapper {
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: 60fr 40fr;
+  column-gap: 30px;
+
+  @media (max-width: map-get($media, md, width)) {
+    margin-top: 0;
+  }
+
+  @media (max-width: map-get($media, lg, width)) {
+    margin-top: 40px;
+    grid-template-columns: 1fr;
+    column-gap: 0px;
+  }
+}

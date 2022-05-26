@@ -1,0 +1,28 @@
+&__img {
+  display: flex;
+  justify-content: flex-end;
+  grid-area: app-2__img;
+
+  img {
+    @media (max-width: map-get($media, md, width)) {
+      width: 258px;
+      height: 275px;
+      margin: auto;
+    }
+
+    @media (min-width: map-get($media, md, width)) {
+      width: 294px;
+      height: 322px;
+    }
+
+    @media (min-width: map-get($media, lg, width)) {
+      width: 333px;
+      height: 355px;
+    }
+
+    @media (min-width: map-get($media, xl, width)) {
+      width: 455px;
+      height: 497px;
+    }
+  }
+}

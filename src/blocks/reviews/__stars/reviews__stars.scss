@@ -1,0 +1,15 @@
+&__stars {
+  @media (max-width: map-get($media, lg, width)) {
+    margin-bottom: 11px;
+  }
+  svg {
+    margin-left: 6px;
+    color: map-get($colors, 5);
+    width: auto !important;
+    height: 11.67px;
+    @media (max-width: map-get($media, lg, width)) {
+      margin-left: 0;
+      margin-right: 6px;
+    }
+  }
+}

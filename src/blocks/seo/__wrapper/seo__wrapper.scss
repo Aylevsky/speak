@@ -1,0 +1,45 @@
+&__wrapper {
+  color: map-get($colors, text, 3);
+  font-family: map-get($fonts, main);
+  margin-top: 30px;
+  display: grid;
+
+  br {
+    content: "";
+    margin: 12px;
+    display: block;
+  }
+
+  @media (max-width: map-get($media, lg, width)) {
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: map-get($media, lg, width)) {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+  }
+
+  p {
+    @media (max-width: map-get($media, md, width)) {
+      font-size: 14px;
+      line-height: 150%;
+    }
+
+    @media (min-width: map-get($media, md, width)) {
+      font-size: 16px;
+      line-height: 140%;
+    }
+  }
+
+  h4 {
+    margin-bottom: 10px;
+  }
+
+  ul {
+    list-style: disc;
+    font-size: 14px;
+    line-height: 150%;
+    margin: 10px 0;
+    margin-inline-start: 15px;
+  }
+}

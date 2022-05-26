@@ -1,0 +1,26 @@
+&__video {
+  grid-area: about__video;
+  iframe {
+    width: 100%;
+    border-radius: 24px;
+
+    @media (max-width: map-get($media, md, width)) {
+      height: 178px;
+      margin-top: 40px;
+    }
+
+    @media (min-width: map-get($media, md, width)) {
+      height: 385px;
+      margin-top: 50px;
+    }
+
+    @media (min-width: map-get($media, lg, width)) {
+      height: 330px;
+      margin-top: 0;
+    }
+
+    @media (min-width: map-get($media, xl, width)) {
+      height: 420px;
+    }
+  }
+}

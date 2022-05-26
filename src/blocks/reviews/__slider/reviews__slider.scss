@@ -1,0 +1,19 @@
+&__slider {
+  position: relative;
+  @media (max-width: map-get($media, md, width)) {
+    margin-top: 30px;
+  }
+
+  @media (min-width: map-get($media, md, width)) {
+    margin-top: 50px;
+  }
+
+  @media (min-width: map-get($media, xl, width)) {
+    overflow: visible !important;
+  }
+
+  .swiper-slide-active,
+  .swiper-slide-next {
+    opacity: 1 !important;
+  }
+}

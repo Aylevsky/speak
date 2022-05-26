@@ -1,0 +1,14 @@
+&__speak-wrapper {
+  margin-top: 30px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 20px;
+  @media (max-width: map-get($media, md, width)) {
+    column-gap: 15px;
+    align-self: center;
+  }
+  @media (max-width: map-get($media, lg, width)) {
+    width: fit-content !important;
+  }
+}

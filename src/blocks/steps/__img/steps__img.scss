@@ -1,0 +1,29 @@
+&__img {
+  grid-area: steps__img;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    margin-right: -25px;
+    @media (max-width: map-get($media, md, width)) {
+      width: 100%;
+      max-width: 320px;
+      margin-right: 0;
+    }
+
+    @media (min-width: map-get($media, md, width)) {
+      width: 317px;
+
+    }
+
+    @media (min-width: map-get($media, lg, width)) {
+      width: 350px;
+    }
+
+    @media (min-width: map-get($media, xl, width)) {
+      width: 408px;
+      
+    }
+  }
+}

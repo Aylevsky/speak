@@ -1,0 +1,18 @@
+.pagination {
+  position: relative !important;
+  margin-top: 20px;
+
+  .swiper-pagination-bullet {
+    transition: 0.15s;
+    height: 6px;
+    width: 20px;
+    border-radius: 3px;
+    background-color: map-get($colors, main);
+    opacity: 0.25;
+  }
+
+  .swiper-pagination-bullet-active {
+    width: 30px;
+    opacity: 1;
+  }
+}

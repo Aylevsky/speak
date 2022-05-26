@@ -1,0 +1,9 @@
+&__line {
+  width: 20px;
+  height: 2px;
+  border-radius: 2px;
+  background: map-get($colors, main);
+  opacity: 0.25;
+  align-self: center;
+  margin: 0 10px;
+}
