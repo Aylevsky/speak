@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <link rel="stylesheet" href="./bundles/main.min.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPEAK</title>
+  </head>
+  <body>
+    <div class="loader"> <img src="./images/blocks/loader/loader.svg" alt="" srcset=""></div>
+    <div class="blur-1">
+      <header class="header">
+        <div class="header__wrapper container"><img class="header__logo" src="./images/blocks/header/logo.png" alt="logo" srcset="">
+          <ul class="header__navigation" v-bind:class="{'header__navigation_visible_true': header__navigation_visible, 'header__navigation_visible_false': !header__navigation_visible}">
+            <li><a href="http://">About us</a></li>
+            <li><a href="http://">Blog</a></li>
+            <li><a href="http://">Contact</a></li>
+          </ul>
+          <div class="header__buttons">
+            <div class="header__lang" @click="showLangList($event)"><img src="./images/blocks/header/__lang/us.svg" alt="" srcset=""><span>EN</span><i class="fa fa-solid fa-angle-down"></i></div>
+            <ul class="header__lang-list" v-bind:class="{'header__lang-list_display_block': header__langList_display,'header__lang-list_display_none': !header__langList_display}" @click="stopPropagation($event)">
+              <li><a href="#"> <img loading="lazy" src="./images/blocks/header/__lang/us.svg" alt="" srcset=""><span>RU </span></a></li>
+              <li><a href="#"> <img loading="lazy" src="./images/blocks/header/__lang/us.svg" alt="" srcset=""><span>FR </span></a></li>
+              <li><a href="#"> <img loading="lazy" src="./images/blocks/header/__lang/us.svg" alt="" srcset=""><span>UA</span></a></li>
+            </ul><a class="button header__button" href="#">Войти</a><a class="button button_size_small header__touch-button" href="#">Начать беседу</a>
+            <div class="header__menu-burger" @click="showNavigations">
+              <div class="header__menu-burger-line"></div>
+              <div class="header__menu-burger-line header__menu-burger-line_color_green"></div>
+              <div class="header__menu-burger-line"></div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="banner">
+        <div class="container banner__wrapper">
+          <div class="banner__content wow animate__lightSpeedInLeft">
+            <div class="subtitle">+300 прошедших отбор психологов</div>
+            <h1 class="banner__main-title">Сессии с психологом Онлайн</h1>
+            <div class="button button_size_big">Начать беседу</div>
+          </div>
+        </div>
+      </div>
+      <div class="app">
+        <div class="container app__wrapper">
+          <div class="app__video">
+            <iframe loading="lazy" src="//youtube.com/embed/-3iOrvvWiLY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="download-app app__download wow animate__backInRight">
+            <h3 class="title-h3">Скачайте бесплатно приложение SPEAK</h3>
+            <div class="download-app__speak-wrapper">
+              <div class="download-app__logo"><img src="./images/blocks/download-app/logo.svg" alt="logo" srcset=""></div>
+              <div class="download-app__info"> 
+                <div class="download-app__name">SPEAK</div>
+                <p class="download-app__desk">онлайн сессии с психологом доступно для iOS и Android</p>
+              </div>
+            </div>
+            <div class="download-app__stores">
+              <div class="download-app__store"><img src="./images/blocks/download-app/__store/app-store.svg" alt="" srcset=""></div>
+              <div class="download-app__store"><img src="./images/blocks/download-app/__store/google.svg" alt="" srcset=""></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="speakers">
+      <div class="speakers__wrapper container">
+        <h3 class="title-h3 title-h3_align_center wow animate__lightSpeedInLeft">Психологи работающие с актуальными темами</h3>
+        <div class="speakers__tags wow animate__slideInUp">
+          <div class="button button_size_middle button_bg-color_light button_weight_400">Чувства</div>
+          <div class="button button_size_middle button_bg-color_light button_weight_400">Одиночество</div>
+          <div class="button button_size_middle button_bg-color_light button_color_green">Вредные привычки</div>
+          <div class="button button_size_middle button_bg-color_light button_weight_400">Отношения</div>
+          <div class="button button_size_middle button_bg-color_light button_weight_400">Работа</div>
+          <div class="button button_size_middle button_bg-color_light button_weight_400">Смыслы</div>
+          <div class="button button_size_middle button_bg-color_light button_weight_400">Одиночество</div>
+          <div class="button button_size_middle button_bg-color_light button_weight_400">Одиночество</div>
+          <div class="button button_size_middle button_bg-color_light button_weight_400">Отношения с близкими</div>
+          <div class="button button_size_middle">+ 300 психологов</div>
+        </div>
+      </div>
+      <div class="swiper container speakers__slider wow animate__slideInUp">
+        <div class="swiper-wrapper speakers__slider-wrapper">
+          <div class="speakers__slide-wrapper swiper-slide">
+            <div class="speakers__slide"><img loading="lazy" src="./images/blocks/speakers/__slide/1.png" alt="slide" srcset="">
+              <div class="speakers__slide-speaker-name">Илья Благов</div>
+              <div class="speakers__bottom">
+                <div class="speakers__left"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div><a class="speakers__right" href="#"><i class="fa-solid fa-arrow-right-long"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="speakers__slide-wrapper swiper-slide">
+            <div class="speakers__slide"><img loading="lazy" src="./images/blocks/speakers/__slide/2.png" alt="slide" srcset="">
+              <div class="speakers__slide-speaker-name">Иванна Есина</div>
+              <div class="speakers__bottom">
+                <div class="speakers__left"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div><a class="speakers__right" href="#"><i class="fa-solid fa-arrow-right-long"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="speakers__slide-wrapper swiper-slide">
+            <div class="speakers__slide"><img loading="lazy" src="./images/blocks/speakers/__slide/3.png" alt="slide" srcset="">
+              <div class="speakers__slide-speaker-name">Артур Островский</div>
+              <div class="speakers__bottom">
+                <div class="speakers__left"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div><a class="speakers__right" href="#"><i class="fa-solid fa-arrow-right-long"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="speakers__slide-wrapper swiper-slide">
+            <div class="speakers__slide"><img loading="lazy" src="./images/blocks/speakers/__slide/4.png" alt="slide" srcset="">
+              <div class="speakers__slide-speaker-name">Юля Заграничная</div>
+              <div class="speakers__bottom">
+                <div class="speakers__left"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div><a class="speakers__right" href="#"><i class="fa-solid fa-arrow-right-long"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="speakers__slide-wrapper swiper-slide">
+            <div class="speakers__slide"><img loading="lazy" src="./images/blocks/speakers/__slide/5.png" alt="slide" srcset="">
+              <div class="speakers__slide-speaker-name">Андрей Ян</div>
+              <div class="speakers__bottom">
+                <div class="speakers__left"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div><a class="speakers__right" href="#"><i class="fa-solid fa-arrow-right-long"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="speakers__slider-pagination swiper-pagination pagination"></div>
+      </div>
+    </div>
+    <div class="blur-2">
+      <div class="help">
+        <div class="container help__wrapper">
+          <h2 class="title-h2 help__title wow animate__lightSpeedInLeft">Поможем вам</h2>
+          <ul class="help__list fa-ul">
+            <li><span class="fa-li"><i class="fa-duotone fa-circle-check"></i></span> Разрешить причины сложных отношений с партнером</li>
+            <li><span class="fa-li"><i class="fa-duotone fa-circle-check"></i></span> Снять или снизить остроту переживаний</li>
+            <li><span class="fa-li"><i class="fa-duotone fa-circle-check"></i></span> Справиться с выгоранием на работе и найти мотивацию</li>
+            <li><span class="fa-li"><i class="fa-duotone fa-circle-check"></i></span> Понять себя в отношениях с близкими людьми</li>
+            <li><span class="fa-li"><i class="fa-duotone fa-circle-check"></i></span> Найти себя и понимать свои желания</li>
+            <li><span class="fa-li"><i class="fa-duotone fa-circle-check"></i></span> Исследовать и управлять изменениями в своей жизни</li>
+          </ul>
+          <div class="help__img wow animate__fadeInRight"><img src="./images/blocks/help/help.png" alt="help" srcset=""></div>
+        </div>
+      </div>
+    </div>
+    <div class="advantage">
+      <div class="container advantage__wrapper"> 
+        <div class="advantage__img wow animate__fadeInLeft"><img loading="lazy" src="./images/blocks/advantage/__img/mobile.png" alt="" srcset=""></div>
+        <div class="advantage__content"> 
+          <div class="title-h2 advantage__title wow animate__backInRight">Преимущества онлайн сессий с психологом</div>
+          <ul class="advantage__list">
+            <li class="wow animate__slideInUp"><b>Занимайтесь где и как удобно</b>
+              <p>Дома или в поездке и в любом часовом поясе</p>
+            </li>
+            <li class="wow animate__slideInUp"><b>Меньше забот- больше мотивации</b>
+              <p>Не тратьте время на дорогу и управляйте занятиями в два клика</p>
+            </li>
+            <li class="wow animate__slideInUp"><b>Доверяйте себе</b>
+              <p>Выбирайте среди проверенных психологов, которые специаллизируются на ваших запросах</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="steps"> 
+      <div class="container steps__wrapper"> 
+        <div class="steps__header">
+          <h2 class="title-h2 wow animate__fadeInLeft">Как мы отбираем специалистов?</h2>
+          <div class="subtitle wow animate__fadeInLeft">Отбор проходят меньше 10% специаллистов</div>
+        </div>
+        <div class="steps__step-list">
+          <div class="steps__step wow animate__fadeInLeft" data-index="1"><span>Документы об образовании</span>
+            <p>Обязательно иметь высшее психологическое образование и сертификаты для ведения психотерапии</p>
+          </div>
+          <div class="steps__step wow animate__fadeInRight" data-index="2"> <span>Опыт частной практики и личной терапии</span>
+            <p>Нужно не менее 3-х лет частной практики, личная терапия и регулярные супервизии</p>
+          </div>
+          <div class="steps__step wow animate__fadeInLeft" data-index="3"><span>Собеседование с нашим экспертом-ментором</span>
+            <p>Отслеживаются коммуникативные способности, уровень эмпатии, манера и стиль беседы,  проффесиональные компетенции</p>
+          </div>
+        </div>
+        <div class="steps__img"> <img loading="lazy" src="./images/blocks/steps/__img/img.png" alt=""></div>
+      </div>
+    </div>
+    <div class="about"> 
+      <div class="container">
+        <h2 class="title-h2 title-h2_align_center animate__lightSpeedInLeft">О сервисе</h2>
+      </div>
+      <div class="container about__wrapper-1">
+        <div class="about__video">
+          <iframe loading="lazy" src="//youtube.com/embed/-3iOrvvWiLY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="about__nums">
+          <div class="about__num wow animate__lightSpeedInRight"><span>900 +</span>
+            <p>регистраций вчера</p>
+          </div>
+          <div class="about__num wow animate__lightSpeedInRight"><span>75 000 +</span>
+            <p>проведено сессий</p>
+          </div>
+          <div class="about__num wow animate__lightSpeedInRight"><span>354 +</span>
+            <p>психологов</p>
+          </div>
+        </div>
+      </div>
+      <div class="container about__wrapper-2">
+        <div class="about__card wow animate__fadeInLeft"><img loading="lazy" src="./images/blocks/about/__card/img-1.png" alt="" srcset="">
+          <div class="about__card-content"> <span>Подбор “По позже”</span>
+            <p>Подбор с возможностью бронирование сессии на будущее</p>
+          </div>
+        </div>
+        <div class="about__card wow animate__lightSpeedInRight"><img loading="lazy" src="./images/blocks/about/__card/img-2.png" alt="" srcset="">
+          <div class="about__card-content"> <span>Подбор “Сейчас”</span>
+            <p>Подбор с возможностью начала сессии “здесь и сейчас”</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="blur-2">
+      <div class="how-work"> 
+        <div class="container">
+          <h2 class="title-h2 title-h2_align_center wow animate__slideInUp">Как это устроено</h2>
+        </div>
+        <div class="container how-work__wrapper">
+          <div class="how-work__steps">
+            <div class="how-work__num" data-index="1" @click="changeStep(1, $event)">1</div>
+            <div class="how-work__line"></div>
+            <div class="how-work__num how-work__num_selected_true" data-index="2" @click="changeStep(2, $event)">2</div>
+            <div class="how-work__line"></div>
+            <div class="how-work__num" data-index="3" @click="changeStep(3, $event)">3</div>
+            <div class="how-work__line"></div>
+            <div class="how-work__num" data-index="4" @click="changeStep(4, $event)">4</div>
+          </div>
+          <div class="how-work__step how-work__step_mob-display_block wow animate__fadeInLeft" data-index="1"><b>Заполните простую анкету</b>
+            <p>Расскажите, что вас беспокоит и что важно в психологе. </p>
+          </div>
+          <div class="how-work__step how-work__step_bg_green wow animate__lightSpeedInRight" data-index="2"><b>Выберите психолога</b>
+            <p>Выберите понравившегося психолога </p>
+          </div>
+          <div class="how-work__step wow animate__fadeInLeft" data-index="3"><b>Выберите способ связи с психологом</b>
+            <p>49руб/мин по <span>аудио/видео</span> связи 200руб за 24 часа <span>чата + аудио сообщения</span></p>
+          </div>
+          <div class="how-work__step wow animate__lightSpeedInRight" data-index="4"><b>Начните общение</b>
+            <p>Все общение происходит через платформу SPEAK. Вслучае если психолог вам не понравится, вы можете заменить его без дополнительных переплат</p>
+          </div>
+          <div class="how-work__img"> <img loading="lazy" src="./images/blocks/how-work/__img/smartphone.png" alt="smartphone" srcset=""></div><a class="button button_size_big button_bg-color_light button_color_green button_border-color_green how-work__button" href="#">Начать общение</a>
+        </div>
+      </div>
+    </div>
+    <div class="services">
+      <div class="container">
+        <h2 class="title-h2 wow animate__fadeInLeft">Услуги</h2>
+      </div>
+      <div class="container">
+        <div class="services__wrapper">
+          <div class="services__service wow animate__fadeInLeft">
+            <div class="services__header">
+              <div class="services__time">24 часа чата </div>
+              <div class="services__price">4200₽<span>/ 24 часа</span></div>
+            </div>
+            <ul class="services__list fa-ul"> 
+              <li><span class="fa-li"><i class="fa-duotone fa-circle-check"></i></span> 24 часа доступа к чату с психологом</li>
+              <li><span class="fa-li"><i class="fa-duotone fa-circle-check"></i></span> Аудио сообщения</li>
+            </ul><a class="button button_color_green button_bg-color_light button_size_big" href="#">Перейти</a>
+          </div>
+          <div class="services__service services__service_type_two wow animate__fadeInRight">
+            <div class="services__popular">Популярное <i class="fa-solid fa-star"></i></div>
+            <div class="services__header">
+              <div class="services__time services__time_type_two">Аудио/Видео сессии </div>
+              <div class="services__price services__price_type_two">49₽ <span>/ 1 минута </span></div>
+            </div>
+            <ul class="services__list services__list_type_two fa-ul"> 
+              <li><span class="fa-li"><i class="fa-duotone fa-circle-check"></i></span> Безлимитный доступа к чату с психологом до начала сессии</li>
+              <li><span class="fa-li"><i class="fa-duotone fa-circle-check"></i></span> Аудио сообщения</li>
+              <li><span class="fa-li"><i class="fa-duotone fa-circle-check"></i></span> Нет лимитов по времени разговора</li>
+            </ul>
+            <div class="services__footer">
+              <div class="services__input-num"> 
+                <div class="services__input-left">
+                  <div @click="minusTenMinutes"><i class="fa-solid fa-caret-left fax2"></i></div><span>{{minutes}}</span>
+                  <div @click="plusTenMinutes"><i class="fa-solid fa-caret-right fax2"></i></div>
+                </div>
+                <div class="services__input-center"><span class="services__placeholder">min</span>
+                  <div class="services__v-line"></div><span>{{price}}</span>
+                </div>
+                <div class="services__input-right"><span class="services__placeholder">₽</span></div>
+              </div><a class="button button_color_green button_bg-color_light button_size_big" href="#">Перейти</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="app-2"> 
+      <div class="container app-2__wrapper"> 
+        <div class="download-app app__download app-2__download wow animate__fadeInLeft">
+          <h3 class="title-h3">Скачайте бесплатно приложение SPEAK</h3>
+          <div class="download-app__speak-wrapper">
+            <div class="download-app__logo"><img loading="lazy" src="./images/blocks/download-app/logo.svg" alt="logo" srcset=""></div>
+            <div class="download-app__info"> 
+              <div class="download-app__name">SPEAK</div>
+              <p class="download-app__desk">онлайн сессии с психологом доступно для iOS и Android</p>
+            </div>
+          </div>
+          <div class="download-app__stores">
+            <div class="download-app__store"><img loading="lazy" src="./images/blocks/download-app/__store/app-store.svg" alt="" srcset=""></div>
+            <div class="download-app__store"><img loading="lazy" src="./images/blocks/download-app/__store/google.svg" alt="" srcset=""></div>
+          </div>
+        </div>
+        <div class="app-2__img wow animate__fadeInRight"><img src="./images/blocks/app-2/__img/smartphone.png" alt="" srcset=""></div>
+      </div>
+    </div>
+    <div class="reviews">
+      <div class="container">
+        <h2 class="title-h2 wow animate__slideInUp">Отзывы</h2>
+      </div>
+      <div class="container swiper reviews__slider wow animate__slideInUp">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide reviews__slide"> <img class="reviews__img" loading="lazy" src="./images/blocks/reviews/__slide/img-3.png" alt="" srcset="">
+            <div class="swiper-lazy-preloader"></div>
+            <div class="reviews__header"> 
+              <div>
+                <div class="reviews__name">Sophia Jones</div>
+                <div class="reviews__job">Teacher</div>
+              </div>
+              <div class="reviews__stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+            <div class="reviews__desk">After just 2 months, Speak has already made such an impact on my life. It has helped me develop manageable solutions to feelings of stress, anxiety, and overwhelm. Speaker helped me navigate the difficult stages of grief after losing my mom, with compassion and encouragement. And she’s easy to open up to, making me feel heard and understood.</div>
+          </div>
+          <div class="swiper-slide reviews__slide"> <img class="reviews__img" loading="lazy" src="./images/blocks/reviews/__slide/img-2.png" alt="" srcset="">
+            <div class="reviews__header"> 
+              <div>
+                <div class="reviews__name">Jay K. Braun</div>
+                <div class="reviews__job">Artist</div>
+              </div>
+              <div class="reviews__stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+            <div class="reviews__desk">After just 2 months, Speak has already made such an impact on my life. It has helped me develop manageable solutions to feelings of stress, anxiety, and overwhelm. Speaker helped me navigate the difficult stages of grief after losing my mom, with compassion and </div>
+          </div>
+          <div class="swiper-slide reviews__slide"> <img class="reviews__img" loading="lazy" src="./images/blocks/reviews/__slide/img-1.png" alt="" srcset="">
+            <div class="reviews__header"> 
+              <div>
+                <div class="reviews__name">Jay K. Braun</div>
+                <div class="reviews__job">Artist</div>
+              </div>
+              <div class="reviews__stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+            <div class="reviews__desk">After just 2 months, Speak has already made such an impact on my life. It has helped me develop manageable solutions to feelings of stress, anxiety, and overwhelm. Speaker helped me navigate the difficult stages of grief after losing my mom, with compassion and encouragement. And she’s easy to open up to, making me feel heard and understood.</div>
+          </div>
+        </div>
+        <div class="reviews__slider-pagination swiper-pagination pagination"></div>
+      </div>
+    </div>
+    <div class="seo"> 
+      <div class="container"> 
+        <h3 class="title-h3 seo__title wow animate__slideInUp">Детский психолог онлайн</h3>
+      </div>
+      <div class="container seo__wrapper"> 
+        <div class="seo__col">
+          <div>
+            <h4 class="title-h4">Чем поможет детский психолог онлайн?</h4>
+            <p>Каждый родитель хочет, чтобы его ребенок рос сильной уравновешенной личностью. Мы понимаем, что именно в детстве формируются зачатки характера. Как справиться с возникающими проблемами, как выстроить отношения с ребенком, чтобы он доверял вам? На эти и другие вопросы поможет ответить детский психолог онлайн.</p>
+          </div>
+          <div>
+            <h4 class="title-h4">Преимущества онлайн-консультации детского психолога</h4>
+            <p>Главный плюс сеанса в таком формате – экономия времени. Вам не придется тратить время на дорогу и долгие сборы. Все, что нужно – компьютер или смартфон, микрофон и блокнот с ручкой, чтобы записывать важную информацию. Если вам или ребенку тяжело общаться с незнакомым человеком лично, онлайн-связь в этом случае упростит дело. </p>
+          </div>
+          <div>
+            <h4 class="title-h4">Когда нужна помощь детского психолога онлайн?</h4>
+            <p>Онлайн-консультация детского психолога может быть полезна, если у вас есть вопросы по таким темам, как:</p>
+            <ul> 
+              <li>Плохая успеваемость;</li>
+              <li>Стеснительность;</li>
+              <li>Цифровая зависимость;</li>
+              <li>Агрессия;</li>
+              <li>Потеря близкого в семье;</li>
+              <li>Возрастной кризис;</li>
+              <li>Подготовка к детскому саду или школе;</li>
+              <li>Профориентация.</li>
+            </ul><br>
+            <p>Это лишь часть тем, которые можно затронуть. Помните, что, если возникает ситуация, в которой вы самостоятельно не можете разобраться, сейчас консультация детского психолога онлайн поможет найти ответы.</p>
+          </div>
+          <div>
+            <h4 class="title-h4">Как проходит онлайн-консультация детского психолога?</h4>
+            <p>Задать вопрос детскому психологу онлайн может как сам ребенок, так и родитель. </p>
+          </div>
+        </div>
+        <div class="seo__col">
+          <div>
+            <p>На первом сеансе обычно присутствует родитель или опекун, а также сам «виновник торжества». Следующие сеансы могут быть и без взрослого, если ребенок сам в состоянии связаться через интернет.</p><br>
+            <p>Бывает и так, что сначала ребенку присутствовать необязательно. В этом случае работа происходит с родителем, а если есть необходимость, позже присоединяется ребенок.</p><br>
+            <p>Психолог по детским вопросам онлайн может попросить ребенка нарисовать что-то, далее по этим рисункам он проведет диагностику. Родитель тоже является звеном связи с психикой ребенка. Через него психолог может сделать вывод о том, какая проблема сейчас назрела.</p><br>
+            <p>Если специалист попросит вас пройти обследование или сдать анализы для более ясной картины, не пугайтесь, это нормально. Таким образом, вы оба сможете исключить какие-либо диагнозы</p>
+          </div>
+          <div>
+            <h4 class="title-h4">О чем поговорить с детским психологом?</h4>
+            <p>Родители малышей часто обращаются с вопросами об адаптации в детском саду. Есть тревожные мамы, которые сомневаются, стоит ли отдавать малыша в сад или же пока слишком рано. Очень многих волнует, что воспитатель будет срываться на ребенка. Это логично, ведь в силу того, что в СМИ регулярно появляются жуткие новости о чудовищных ЧП в детсадах, беспокойство обосновано. </p><br>
+            <p>Отдельный вопрос подготовки к саду. В интернете полно информации в таком ключе: «ребенок должен научиться самостоятельно есть, ходить в туалет и засыпать сам перед тем, как идти в сад». Особо мнительные беспрекословно верят, другие понимают: ребенок ничего никому не должен. Его невозможно научить чему-то, пока он сам не захочет делать это. «Дрессировке» малыши не поддаются. Но пугаться не стоит, в любом случае, воспитатели будут помогать малышам в этих вопросах. Главное – настроиться на позитив и верить в хорошее.</p><br>
+            <p>Дети постарше сталкиваются с проблемами переходного возраста, неуверенностью в себе, безответной любовью и другими. Если вы понимаете, что вам с чадом необходима онлайн-консультация, вы можете выбрать специалиста на нашем сайте.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container footer__wrapper"> 
+        <div class="footer__col"><img class="footer__logo" loading="lazy" src="./images/logo.png" alt="" srcset="">
+          <div class="footer__links"><a href="#">Home</a><a href="#">Blog</a><a href="#">Privacy Policy</a><a href="#">About us</a><a href="#">Contact</a><a href="#">Terms and Conditions</a></div>
+        </div>
+        <div class="footer__col">
+          <div class="footer__social">
+            <div><a href="#"> <img loading="lazy" src="./images/blocks/footer/__social/facebook.png" alt="" srcset=""></a></div>
+            <div><a href="#"><img loading="lazy" src="./images/blocks/footer/__social/instagram.png" alt="" srcset=""></a></div>
+            <div><a href="#"><img loading="lazy" src="./images/blocks/footer/__social/linkedin.png" alt="" srcset=""></a></div>
+            <div><a href="#"><img loading="lazy" src="./images/blocks/footer/__social/twitter.png" alt="" srcset=""></a></div>
+          </div>
+          <ul class="fa-ul footer__list"> 
+            <li><span class="fa-li"><i class="fa-solid fa-envelope"></i></span> info@speak.help</li>
+            <li><span class="fa-li"><i class="fa-solid fa-location-dot"></i></span> 33 W 60th Street, 8th FI New York, NY 10023</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+<link rel="stylesheet" href="./vendor/animate/animate.min.css">
+<script src="./vendor/wow/wow.min.js"></script>
+<script src="./vendor/vue/vue.min.js"></script>
+<script src="./bundles/app.min.js"></script>
+<!-- Font Awesome-->
+<link loading="lazy" rel="stylesheet" href="./vendor/fontawesome-6/pro/css/all.min.css">
+<script loading="lazy" src="./vendor/fontawesome-6/pro/js/all.min.js"></script>
