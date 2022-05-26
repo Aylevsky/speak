@@ -1,7 +1,0 @@
-&__button {
-  margin-left: 30px;
-  @media (max-width: map-get($media, lg, width)) {
-    display: none;
-    margin: 0;
-  }
-}

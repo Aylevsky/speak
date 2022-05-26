@@ -1,6 +1,0 @@
-&_bg_green {
-  &::before {
-    color: map-get($colors, text, 2);
-    background: map-get($colors, main);
-  }
-}

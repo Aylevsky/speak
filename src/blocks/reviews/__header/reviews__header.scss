@@ -1,9 +1,0 @@
-&__header {
-  display: flex;
-  justify-content: space-between;
-  grid-area: reviews__header;
-
-  @media (max-width: map-get($media, lg, width)) {
-    flex-direction: column-reverse;
-  }
-}

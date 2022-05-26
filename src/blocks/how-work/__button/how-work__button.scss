@@ -1,8 +1,0 @@
-&__button {
-  @media (min-width: map-get($media, lg, width)) {
-    grid-column-start: 2;
-    grid-column-end: 3;
-  }
-  width: fit-content;
-  margin: 40px auto;
-}

@@ -1,8 +1,0 @@
-&__time {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 140%;
-  color: map-get($colors, text, 3);
-  font-family: map-get($fonts, main);
-  @import "./_type/services__time_type.scss";
-}
