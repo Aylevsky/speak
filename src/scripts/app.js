@@ -18,8 +18,7 @@ new Services().Services__inputNum();
 import { Reviews } from "../blocks/reviews/reviews.js";
 new Reviews().Reviews__slider();
 
-import { Loader } from "../blocks/loader/loader.js";
-new Loader();
+
 const wow = new WOW({
   boxClass: 'wow',
   animateClass: 'animate__animated',
@@ -27,4 +26,9 @@ const wow = new WOW({
   mobile: false,
   live: true
 })
-wow.init();
+
+import { Loader } from "../blocks/loader/loader.js";
+window.onload = function () {
+  new Loader();
+  wow.init();
+}
