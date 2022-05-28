@@ -5,11 +5,14 @@
     display: block;
     position: absolute;
     background: map-get($colors, main);
-    filter: blur(350px);
+    filter: blur(250px);
     width: 300px;
     height: 300px;
     border-radius: 150px;
     top: calc(50% - 150px);
     right: 0px;
+    @-moz-document url-prefix() {
+      opacity: 0.3;
+    }
   }
 }
