@@ -1,3 +1,4 @@
+import fileinclude from "gulp-file-include";
 import pug from "gulp-pug";
 import webpHtmlNosvg from "gulp-webp-html-nosvg";
 import versionNumber from "gulp-version-number";
@@ -23,6 +24,7 @@ export const pugFiles = () => {
       })
     )
     .pipe(app.plugins.replace(/@img\//g, "./images/"))
+    .pipe(fileinclude())
     .pipe(app.plugins.if(app.isBuild, webpHtmlNosvg()))
     .pipe(
       app.plugins.if(
